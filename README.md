@@ -106,5 +106,5 @@ Invalid url https://www.anaconda.com/wp-content/uploads/2018/05/Screen-Shot-2018
 
 ```
 
-![Alt text](images/anaconda_navigator.png?raw=true "Title")
+![anaconda_navigator](./images/anaconda_navigator.png)
 
