@@ -148,7 +148,7 @@ $
 * Test
 
 ```
-(base) [python@192-168-1-10 ~]$ aws ec2 describe-key-pairs --profile prod
+$ aws ec2 describe-key-pairs --profile prod
 {
     "KeyPairs": [
         {
@@ -161,7 +161,7 @@ $
         }
     ]
 }
-(base) [python@192-168-1-10 ~]$ 
+$ 
 
 ```
 
