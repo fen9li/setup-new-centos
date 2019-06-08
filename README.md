@@ -108,3 +108,60 @@ Invalid url https://www.anaconda.com/wp-content/uploads/2018/05/Screen-Shot-2018
 
 ![anaconda_navigator](./images/anaconda_navigator.png)
 
+
+
+## Install AWS cli
+
+* Upgrade pip if applicable
+
+```
+$ python --version
+Python 3.7.3
+$ pip --version
+pip 19.0.3 from /home/python/anaconda3/lib/python3.7/site-packages/pip (python 3.7)
+$ 
+
+pip install --upgrade pip
+
+$ pip --version
+pip 19.1.1 from /home/python/anaconda3/lib/python3.7/site-packages/pip (python 3.7)
+$ 
+```
+
+* Install and configure awscli 
+```
+pip install awscli --upgrade --user
+
+$ aws --version
+aws-cli/1.16.174 Python/3.7.3 Linux/3.10.0-957.12.2.el7.x86_64 botocore/1.12.164
+$ 
+
+$ aws configure --profile prod
+AWS Access Key ID [None]: 0kUwX0h7WPwOPU6KGl4X
+AWS Secret Access Key [None]: yelOsXNYs13pn9sC6bst7tKD8jkK4ne2q8K9ojQr
+Default region name [None]: ap-southeast-2
+Default output format [None]: 
+$  
+
+```
+
+* Test
+
+```
+(base) [python@192-168-1-10 ~]$ aws ec2 describe-key-pairs --profile prod
+{
+    "KeyPairs": [
+        {
+            "KeyFingerprint": "43:51:43:a1:b5:fc:8b:b7:0a:3a:a9:b1:0f:66:73:a8:f0:62:5a:b8",
+            "KeyName": "first t2"
+        },
+        {
+            "KeyFingerprint": "12:f8:7e:78:61:b4:bf:e2:de:24:15:96:4e:d4:72:53:f0:62:5a:b8",
+            "KeyName": "nessus"
+        }
+    ]
+}
+(base) [python@192-168-1-10 ~]$ 
+
+```
+
