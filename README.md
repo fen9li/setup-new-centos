@@ -63,12 +63,43 @@ Invalid url https://www.anaconda.com/wp-content/uploads/2018/05/Screen-Shot-2018
 
 ## Install Latest Version of Git From IUS Repository
 
+* Install git
 ```
 sudo yum -y install  https://centos7.iuscommunity.org/ius-release.rpm
 sudo yum -y install  git2u-all
 
-(base) [python@192-168-1-10 ~]$ git --version
+$ git --version
 git version 2.16.5
-(base) [python@192-168-1-10 ~]$ 
+$ 
+
+```
+
+* Setup
+```
+mkdir .ssh
+
+$ ll /run/media/$(whoami)/E_4G_02/Backup/id_rsa*
+-rw-r--r--. 1 python python 1679 Feb 15 11:40 /run/media/python/E_4G_02/Backup/id_rsa
+-rw-r--r--. 1 python python  405 Feb 15 11:58 /run/media/python/E_4G_02/Backup/id_rsa.pub
+$ 
+
+sudo cp /run/media/$(whoami)/E_4G_02/Backup/id_rsa* .ssh/
+sudo chown $(whoami). .ssh/id_rsa*
+sudo chmod go-r .ssh/id_rsa*
+
+$ ll .ssh/
+total 8
+-rw-------. 1 python python 1679 Jun  8 18:33 id_rsa
+-rw-------. 1 python python  405 Jun  8 18:33 id_rsa.pub
+$ 
+
+git config --global user.name "Feng Li"
+git config --global user.email lifcn@yahoo.com
+
+$ git config --global --list
+user.name=Feng Li
+user.email=lifcn@yahoo.com
+$ 
+
 ```
 
