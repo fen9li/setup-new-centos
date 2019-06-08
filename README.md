@@ -33,12 +33,12 @@ total 8
 -rw-------. 1 python python  405 Jun  8 18:33 id_rsa.pub
 $ 
 
-git config --global user.name "Feng Li"
-git config --global user.email lifcn@yahoo.com
+git config --global user.name "xxxx xx"
+git config --global user.email xxxxx@xxxxx.com
 
 $ git config --global --list
-user.name=Feng Li
-user.email=lifcn@yahoo.com
+user.name=xxxx xx
+user.email=xxxx@xxxxx.com
 $ 
 
 ```
